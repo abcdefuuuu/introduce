@@ -8,17 +8,29 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@rushstack/eslint-patch": "^1.10.4",
+    "@tailwindcss/postcss7-compat": "^2.2.17",
+    "autoprefixer": "^9.8.8",
     "core-js": "^3.8.3",
+    "ocard-eslint": "bitbucket:OlisInnoGit/ocard-eslint",
+    "postcss": "^7.0.39",
+    "primeicons": "^6.0.1",
+    "primevue": "^2.10.4",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17",
     "vue": "^2.6.14"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.16",
-    "@babel/eslint-parser": "^7.12.16",
+    "@babel/core": "^7.25.2",
+    "@babel/eslint-parser": "^7.25.1",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
-    "eslint": "^7.32.0",
-    "eslint-plugin-vue": "^8.0.3",
+    "@vue/eslint-config-airbnb": "^8.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.0.0",
+    "eslint-plugin-vue": "^9.2.0",
+    "sass": "^1.78.0",
+    "sass-loader": "^16.0.1",
     "vue-template-compiler": "^2.6.14"
   },
   "eslintConfig": {

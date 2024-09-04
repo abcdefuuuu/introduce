@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
+    <br>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <PrimeButton label="Submit" />
   </div>
 </template>
 
@@ -16,7 +18,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
