@@ -19,7 +19,7 @@ module.exports = {
     'plugin:vue/essential',
     'eslint:recommended',
     '@vue/eslint-config-airbnb',
-    // 'plugin:vue/vue-recommended',
+    'plugin:vue/recommended',
     // 'plugin:tailwindcss/recommended',
   ],
   settings: {

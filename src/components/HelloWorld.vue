@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <Button label="Submit" />
+    <p>456789</p>
   </div>
 </template>
 

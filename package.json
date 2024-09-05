@@ -10,6 +10,7 @@
   "dependencies": {
     "@rushstack/eslint-patch": "^1.10.4",
     "@tailwindcss/postcss7-compat": "^2.2.17",
+    "animejs": "^3.2.2",
     "autoprefixer": "^9.8.8",
     "core-js": "^3.8.3",
     "ocard-eslint": "bitbucket:OlisInnoGit/ocard-eslint",
