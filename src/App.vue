@@ -46,7 +46,7 @@
       <svg
         id="second-svg"
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 2693 900"
+        viewBox="0 0 1800 900"
       >
         <g>
           <g id="_圖層_1" data-name="圖層_1">
@@ -79,15 +79,10 @@
     <div class="relative w-full h-full">
       <img src="./assets/kid.jpg" alt="小孩背景图片" class="w-full h-full object-cover" />
       <div
-        class="parallax-content absolute top-10 left-28 bg-white rounded-lg bg-opacity-10"
+        class="absolute top-10 left-28 bg-white rounded-lg bg-opacity-10"
         style="height: 70%; width: 30%;"
       >
         <div class="flex flex-col items-center justify-center h-full">
-          <p class="text-wrapper">
-            <span v-for="(letter, index) in text" :key="index" class="letter">
-              {{ letter }}
-            </span>
-          </p>
           <p class="text-wrapper">
             2002/07/20
           </p>
@@ -100,7 +95,7 @@
     <div class="relative w-full h-full">
       <img src="./assets/2.jpg" alt="柯南大笨鐘" class="w-full h-full object-cover" />
       <div
-        class="parallax-content absolute top-10 right-10 bg-black rounded-lg bg-opacity-90"
+        class="absolute top-10 right-10 bg-black rounded-lg bg-opacity-90"
         style="height: 80%; width: 50%;"
       >
         <div class="flex flex-col items-center justify-center h-full">
@@ -121,7 +116,7 @@
     <div class="relative w-full h-full">
       <img src="./assets/3.jpg" alt="柯南大笨鐘" class="w-full h-full object-cover" />
       <div
-        class="parallax-content absolute top-7 right-10 bg-black rounded-lg bg-opacity-90"
+        class="absolute top-7 right-10 bg-black rounded-lg bg-opacity-90"
         style="height: 80%; width: 50%;"
       >
         <div class="flex flex-col items-center justify-center h-full">
@@ -194,7 +189,7 @@ export default {
       setTimeout(() => {
         anime({
           targets: '.css-transforms-demo .el',
-          translateX: [window.innerWidth, 1050], // 從視窗右邊外部移動到 1150px 的位置
+          translateX: [window.innerWidth, 1200], // 從視窗右邊外部移動到 1150px 的位置
           scale: 3, // 縮放到 2 倍
           rotate: '3turn', // 旋轉
           duration: 1000, // 動畫持續時間
@@ -223,16 +218,16 @@ export default {
 }
 
 .css-transforms-demo .el {
-  width: 25px;
-  height: 25px;
+  width: 50px;
+  height: 50px;
   display: flex;
   position: absolute;
   transform: translateX(-100px);
   margin-top: 400px;
   background-image: url('@/assets/Ocard.svg');
   background-size: cover;
-  background-repeat: no-repeat; /* 避免圖片重複 */
-  background-position: center; /* 圖片在元素中居中 */
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .svg-bg-color {
@@ -241,7 +236,7 @@ export default {
 
 .svg-container {
   margin-top: 100px;
-  margin-left: 10%;
+  margin-left: 15%;
   width: 75%;
   height: 75%;
   position: absolute;
@@ -253,7 +248,6 @@ export default {
 #second-svg {
   width: 100%;
   height: 100%;
-  margin-left: 15%;
   opacity: 0;
 }
 
@@ -273,11 +267,6 @@ export default {
 .letter {
   display: inline-block;
   position: relative;
-}
-
-.parallax-content {
-  will-change: transform;
-  transition: transform 0.1s linear;
 }
 
 #app {
