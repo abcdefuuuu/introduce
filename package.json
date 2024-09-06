@@ -13,6 +13,7 @@
     "animejs": "^3.2.2",
     "autoprefixer": "^9.8.8",
     "core-js": "^3.8.3",
+    "fullpage.js": "^4.0.28",
     "ocard-eslint": "bitbucket:OlisInnoGit/ocard-eslint",
     "postcss": "^7.0.39",
     "primeicons": "^6.0.1",
