@@ -75,10 +75,15 @@
         </svg>
       </div>
       <div class="section">
-        <img src="@/assets/123.jpg" alt="Your Image" class="draggable-resizable rounded-lg" />
+        <img
+          ref="animatedImage"
+          src="@/assets/123.jpg"
+          alt="Your Image"
+          class="draggable-resizable rounded-lg"
+        />
       </div>
       <div class="section">
-        123
+        <third />
       </div>
       <div class="section">
         <starry-sky />
@@ -101,51 +106,6 @@
         </div>
       </div>
     </div>
-    <div class="relative w-full h-full">
-      <img src="./assets/2.jpg" alt="柯南大笨鐘" class="w-full h-full object-cover" />
-      <div
-        class="absolute top-10 right-10 bg-black rounded-lg bg-opacity-90"
-        style="height: 80%; width: 50%;"
-      >
-        <div class="flex flex-col items-center justify-center h-full">
-          <p class="text-wrapper">
-            <span v-for="(letter, index) in text" :key="index" class="letter">
-              {{ letter }}
-            </span>
-          </p>
-          <p class="text-wrapper">
-            123456789
-          </p>
-          <p class="text-wrapper">
-            ㄏ嗨嗨嗨嗨嗨嗨嗨嗨嗨嗨
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="relative w-full h-full">
-      <img src="./assets/3.jpg" alt="柯南大笨鐘" class="w-full h-full object-cover" />
-      <div
-        class="absolute top-7 right-10 bg-black rounded-lg bg-opacity-90"
-        style="height: 80%; width: 50%;"
-      >
-        <div class="flex flex-col items-center justify-center h-full">
-          <p class="text-wrapper">
-            <span v-for="(letter, index) in text" :key="index" class="letter">
-              {{ letter }}
-            </span>
-          </p>
-          <p class="text-wrapper">
-            98541535212351
-          </p>
-          <p class="text-wrapper">
-            984S65123ㄏ15
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="relative w-full h-full">
-      謝謝大家
-    </div>
   </div>
 </template>
 
@@ -154,29 +114,26 @@ import anime from 'animejs';
 import Fullpage from 'fullpage.js';
 import 'fullpage.js/dist/fullpage.css';
 import StarrySky from './components/StarrySky.vue';
+import third from './components/third.vue';
 
 export default {
   name: 'App',
   components: {
     StarrySky,
+    third,
   },
   data() {
     return {
-      text: "HI I'm Zowie",
     };
   },
   mounted() {
-    window.addEventListener('scroll', this.handleScroll);
-    this.animateText();
     this.animateFirstSVG();
+    this.animateImage();
     // eslint-disable-next-line no-new
     new Fullpage('#fullpage', {
       autoScrolling: true,
       scrollHorizontally: true,
     });
-  },
-  beforeDestroy() {
-    window.removeEventListener('scroll', this.handleScroll);
   },
   methods: {
     animateFirstSVG() {
@@ -218,6 +175,7 @@ export default {
           loop: false,
           complete: () => {
             this.startRotation();
+            this.animateImage();
           },
         });
       }, 2000);
@@ -233,15 +191,14 @@ export default {
         loop: true,
       });
     },
-    animateText() {
-      // Text animation code using anime.js
-    },
-    handleScroll() {
-      const scrolled = window.scrollY;
-      document.querySelectorAll('.parallax-content').forEach((el) => {
-        const speed = el.getAttribute('data-speed') || 0.1;
-        // eslint-disable-next-line no-param-reassign
-        el.style.transform = `translateY(${scrolled * speed}px)`;
+    animateImage() {
+      anime({
+        targets: this.$refs.animatedImage,
+        scale: [0.5, 1], // 縮放
+        translateX: [-300, 150], // 從0位移到250px
+        duration: 2000, // 動畫持續時間 2000ms
+        easing: 'easeInOutQuad', // 動畫緩動效果
+        delay: 2000,
       });
     },
   },
@@ -253,7 +210,6 @@ export default {
   left: 0;
   top: 0;
   margin-top: -3vh;
-  margin-left:220px;
   width: auto;
   height: 750px;
   position: absolute;
@@ -301,32 +257,16 @@ export default {
   stroke-width: 3px;
 }
 
-.text-wrapper {
-  display: flex;
-  font-size: 2rem;
-  font-weight: bold;
-  color: white;
-}
-
-.letter {
-  display: inline-block;
-  position: relative;
-}
-
 #fullpage {
   height: 100vh;
-}
-
-.section {
-  text-align: center;
-  font-size: 3em;
-  justify-content: center;
-  align-items: center;
 }
 
 .section:nth-child(1) {
   background-color: #2c3e50;
   display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .section:nth-child(2) {
@@ -350,6 +290,9 @@ export default {
   justify-content: center;
   height: 100%;
   background-color: #2c3e50;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 @import '@/assets/styles.css';
