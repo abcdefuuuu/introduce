@@ -9967,6 +9967,64 @@
         ❆
       </div>
     </div>
+    <div id="playPause">
+      <svg id="letters" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 851.57 206.6">
+        <!-- T -->
+        <polygon
+          class="cls-1 cls-2"
+          points="0.5 0.5 97.5 0.5 97.95 13.06 54.31 13.07 55.35 94.5 40.5 94.5 44.03 13.5 0.5 13.5 0.5 0.5"
+        />
+        <!-- H -->
+        <polygon
+          class="cls-1 cls-3"
+          points="106.33 0.5 106.33 94.5 115.18 94.5 115.18 51.38 151.61 51.03 151.61 94.5 160.12 94.5 160.12 0.5 152.12 0.5 152.3 42.18 115.53 42.44 115.35 0.5 106.33 0.5"
+        />
+        <!-- A -->
+        <path
+          class="cls-1 cls-4"
+          d="M206.06,329.91s17.88-89.7,43.15-92.91c0,0,26.3-2.06,33.28,92.91H271.43s-4.51-42.49-11.24-43.17l-26.5-.28c-3-.1-6,4.54-6.86,7.37-3,9.29-6.61,26.25-7.32,35.23Z"
+          transform="translate(-32.5 -236.5)"
+        />
+        <path
+          class="cls-1 cls-2"
+          d="M240.79,252.64h15.15c2.6,0,5.37,5.63,6.1,8.13.53,1.82,1.12,4,1.55,6.19a5.7,5.7,0,0,1-5.6,6.78H237.94a4.2,4.2,0,0,1-4.18-4.61,40.12,40.12,0,0,1,1.61-8.52C236.2,258.18,240.79,252.64,240.79,252.64Z"
+          transform="translate(-32.5 -236.5)"
+        />
+        <!-- N -->
+        <path
+          class="cls-1 cls-3"
+          d="M294.74,329.91s11.67-71.07,28.38-87a4.37,4.37,0,0,1,6.57.74c8.91,12.76,44,62.4,38.93,78.08,0,0,20.34-71.14,13.1-81.53h10.39s-8.85,88.51-17.37,89.7H362.66S341.29,270,329.33,255.64a3.59,3.59,0,0,0-6.16,1.24C318.6,271.28,304.23,318,306.63,328a1.51,1.51,0,0,1-1.47,1.88Z"
+          transform="translate(-32.5 -236.5)"
+        />
+        <!-- K -->
+        <polygon
+          class="cls-1 cls-4"
+          points="377.14 3.72 373.56 93.42 383.27 93.42 384.37 45.77 388.09 45.77 425.9 93.42 450.33 93.42 396.03 41.16 424.12 3.72 414.42 3.72 398.92 21.77 385.48 35.03 385.99 3.72 377.14 3.72"
+        />
+        <!-- Y -->
+        <polygon
+          class="cls-1 cls-2"
+          points="95.61 128.48 116.88 162.01 116.88 206.1 124.2 206.1 130.41 159.12 148.37 128.48 140.37 128.48 123.35 147.97 108.88 128.48 95.61 128.48"
+        />
+        <!-- O -->
+        <path
+          class="cls-1 cls-3"
+          d="M196.11,383.53c-6.77,9.08-10.35,32-.6,44,14.25,17.5,31.36,19.73,48.77,5.37,11.84-9.77,4.44-43.53,4.44-43.53C237,365.28,210.69,364,196.11,383.53Z"
+          transform="translate(-32.5 -236.5)"
+        />
+        <path
+          class="cls-1 cls-4"
+          d="M215.44,388.78c-8.83,4.67-19.19,18.83-6.49,34.46a15.53,15.53,0,0,0,26.2-3.37c3.39-7.53,3.77-21-3.4-28.6A13.68,13.68,0,0,0,215.44,388.78Z"
+          transform="translate(-32.5 -236.5)"
+        />
+        <!-- U -->
+        <path
+          class="cls-1 cls-2"
+          d="M263.6,368.69V414s5.19,23.61,24.6,24c0,0,23.23-3.14,22.37-23.65l0-46.64h-8.71l-.74,50.9s-16,24-27.26-.77l-2.38-49.14Z"
+          transform="translate(-32.5 -236.5)"
+        />
+      </svg>
+    </div>
   </div>
 </template>
 
@@ -10058,11 +10116,34 @@ export default {
 </script>
 
 <style scoped>
+#playPause{
+  margin-top: 100px;
+  margin-left: 500px;
+}
+.cls-1 {
+  fill: none;
+  stroke: #6639bd;
+  stroke-miterlimit: 10;
+}
+.cls-2 {
+  stroke: #8f1b1b;
+  stroke-width: 2;
+}
+.cls-3 {
+  stroke: #118811;
+  stroke-width: 2;
+}
+.cls-4 {
+  stroke: #435dc7;
+  stroke-width: 2;
+}
+
 svg {
   width: 100%;
   height: 300px;
   display: block;
 }
+
 .snowflake {
   color: #fff;
   font-size: 1em;
@@ -10205,57 +10286,48 @@ svg {
   animation-delay: 4s, 2.5s;
 }
 
-.bg-fo
-{
-  height:300px;
+.bg-fo {
+  height: 300px;
   background: linear-gradient(
-      180deg
-      ,#526ade .02%,#69d3c2 52.36%,#fef5bc 93.75%,#68d3c1);
+      180deg, #526ade .02%, #69d3c2 52.36%, #fef5bc 93.75%, #68d3c1);
 }
 
-.bg-water
-{
-  position:relative;
-  z-index:2;
+.bg-water {
+  position: relative;
+  z-index: 2;
 }
-.bg-stone
-{
+
+.bg-stone {
   position: absolute;
   z-index: 0;
 }
 
-#wing
-{
+#wing {
   transform-box: fill-box;
   transform-origin: center;
 }
 
-#baloon
-{
+#baloon {
   transform-box: fill-box;
   transform-origin: center;
 }
 
-#fan1
-{
+#fan1 {
   transform-box: fill-box;
   transform-origin: 58% 60%;
 }
 
-#fan2
-{
+#fan2 {
   transform-box: fill-box;
   transform-origin: 36% 49%;
 }
 
-#fan3
-{
+#fan3 {
   transform-box: fill-box;
   transform-origin: 57% 58%;
 }
 
-#Group_42
-{
+#Group_42 {
   transform-box: fill-box;
   transform-origin: 58% 60%;
 }
