@@ -1,8 +1,8 @@
 <template>
   <div>
     <img
-        id="me"
-        src="@/assets/4.png"
+      id="me"
+      src="@/assets/4.png"
     />
     <div class="blog-card spring-fever">
       <div class="title-content">
@@ -33,7 +33,7 @@
 <script>
 
 export default {
-  name: 'third',
+  name: 'ThirdSection',
   mounted() {
   },
 };
@@ -166,7 +166,6 @@ h3:after {
 
 .card-info {
   box-sizing: border-box;
-  padding: 0;
   width: 100%;
   position: absolute;
   bottom: -40px;

@@ -97,7 +97,7 @@ import anime from 'animejs';
 import Fullpage from 'fullpage.js';
 import 'fullpage.js/dist/fullpage.css';
 import StarrySky from './components/StarrySky.vue';
-import third from './components/third.vue';
+import third from './components/ThirdSection.vue';
 
 export default {
   name: 'App',
