@@ -1,25 +1,31 @@
 <template>
-  <div class="blog-card spring-fever">
-    <div class="title-content">
-      <h3><a href="#">ABOUT ME</a></h3>
-    </div>
-    <div class="card-info">
-      2002/07/20
-      <br>
-      #蛤
-      <br>
-      #拼圖
-      <br>
-      #超級懶
-      <br>
-      #左右不分
-    </div>
-    <div class="utility-info">
-      <ul class="utility-list">
-        <li><span class="licon icon-like"></span><a href="#">2M</a></li>
-        <li><span class="licon icon-com"></span><a href="#">12K</a></li>
-        <li><span class="licon icon-dat"></span>Sep 2024</li>
-      </ul>
+  <div>
+    <img
+        id="me"
+        src="@/assets/4.png"
+    />
+    <div class="blog-card spring-fever">
+      <div class="title-content">
+        <h3><a href="#">ABOUT ME</a></h3>
+      </div>
+      <div class="card-info">
+        2002/07/20
+        <br>
+        #蛤
+        <br>
+        #拼圖
+        <br>
+        #超級懶
+        <br>
+        #左右不分
+      </div>
+      <div class="utility-info">
+        <ul class="utility-list">
+          <li><span class="licon icon-like"></span><a href="#">2M</a></li>
+          <li><span class="licon icon-com"></span><a href="#">12K</a></li>
+          <li><span class="licon icon-dat"></span>Sep 2024</li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -35,6 +41,16 @@ export default {
 
 <style scoped>
 @import url(//fonts.googleapis.com/css?family=Abril+Fatface|Droid+Serif:400,700,400italic,700italic);
+#me{
+  z-index: 1000;
+  width: 100px;
+  height: 100px;
+  right: 0;
+  top: 0;
+  position: absolute;
+  margin-top: 100px;
+  margin-right: 100px;
+}
 html, body {
   height: 100%
 }
@@ -45,6 +61,7 @@ body {
 }
 
 .blog-card {
+  z-index: 1;
   border-radius: 2rem;
   max-width: 550px;
   width: 100%;

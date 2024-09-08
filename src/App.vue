@@ -89,23 +89,6 @@
         <starry-sky />
       </div>
     </div>
-
-    <div class="relative w-full h-full">
-      <img src="./assets/kid.jpg" alt="小孩背景图片" class="w-full h-full object-cover" />
-      <div
-        class="absolute top-10 left-28 bg-white rounded-lg bg-opacity-10"
-        style="height: 70%; width: 30%;"
-      >
-        <div class="flex flex-col items-center justify-center h-full">
-          <p class="text-wrapper">
-            2002/07/20
-          </p>
-          <p class="text-wrapper">
-            基隆8+9
-          </p>
-        </div>
-      </div>
-    </div>
   </div>
 </template>
 
