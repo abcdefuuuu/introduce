@@ -75,13 +75,13 @@
         </svg>
       </div>
       <div class="section">
-        Section 2
+        <img src="@/assets/123.jpg" alt="Your Image" class="draggable-resizable rounded-lg" />
       </div>
       <div class="section">
-        Section 3
+        123
       </div>
       <div class="section">
-        Section 4
+        123
       </div>
     </div>
     <div class="relative w-full h-full svg-bg-color" style="height: 720px; width: 100%;">
@@ -297,9 +297,9 @@ export default {
       anime({
         targets: '.ocard-logo',
         rotate: {
-          value: -360, // 旋转角度
-          duration: 8000, // 旋转动画持续时间
-          easing: 'linear', // 匀速旋转
+          value: -360,
+          duration: 8000,
+          easing: 'linear',
         },
         loop: true,
       });
@@ -320,6 +320,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.draggable-resizable {
+  left: 0;
+  top: 0;
+  margin-top: -3vh;
+  margin-left:220px;
+  width: auto;
+  height: 750px;
+  position: absolute;
+  z-index: 1;
+}
+
 .ocard-logo{
   top: 0;
   right: 0;
