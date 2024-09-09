@@ -156,7 +156,7 @@ export default {
       setTimeout(() => {
         anime({
           targets: '.ocard-logo',
-          translateX: [0, -550],
+          translateX: [0, -570],
           scale: [1, 2], // 縮放
           rotate: [0, 720], // 旋轉度數
           opacity: [0, 1],
@@ -201,7 +201,7 @@ export default {
   height: 25px;
   display: flex;
   position: absolute;
-  margin-top: 375px;
+  margin-top: 360px;
   background-image: url('@/assets/Ocard.svg');
   background-repeat: no-repeat;
   opacity: 0;
@@ -235,7 +235,7 @@ export default {
   text-align: center;
   justify-content: center;
   align-items: center;
-  padding: 120px 700px 1000px 30px; //上  右  下  往左
+  padding: 0px 650px 350px 0px;//往下  左  上  右
 }
 
 .section:nth-child(2) {
