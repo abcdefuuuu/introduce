@@ -268,6 +268,4 @@ export default {
   justify-content: center;
   align-items: center;
 }
-
-@import '@/assets/styles.css';
 </style>
