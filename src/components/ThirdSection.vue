@@ -76,7 +76,7 @@ body {
   box-shadow: 0px 10px 20px -9px rgba(0, 0, 0, 0.5);
   text-align: center;
   transition: all 0.4s;
-  background-image: url('@/assets/8.jpg');
+  background-image: url('../assets/8.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
