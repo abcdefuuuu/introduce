@@ -16,8 +16,6 @@
     "fullpage.js": "^4.0.28",
     "ocard-eslint": "bitbucket:OlisInnoGit/ocard-eslint",
     "postcss": "^7.0.39",
-    "primeicons": "^6.0.1",
-    "primevue": "^2.10.4",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17",
     "vue": "^2.6.14"
   },

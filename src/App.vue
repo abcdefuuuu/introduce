@@ -90,12 +90,9 @@
       <div class="section">
         <starry-sky />
       </div>
-      <div class="section">
-        <starry-sky />
-      </div>
-      <div class="section">
-        <wave />
-      </div>
+<!--      <div class="section">-->
+<!--        <wave />-->
+<!--      </div>-->
     </div>
   </div>
 </template>
@@ -106,14 +103,14 @@ import Fullpage from 'fullpage.js';
 import 'fullpage.js/dist/fullpage.css';
 import StarrySky from './components/StarrySky.vue';
 import third from './components/ThirdSection.vue';
-import wave from './components/Waves.vue';
+// import wave from './components/Waves.vue';
 
 export default {
   name: 'App',
   components: {
     StarrySky,
     third,
-    wave,
+    // wave,
   },
   data() {
     return {
@@ -208,17 +205,15 @@ export default {
   background-image: url('@/assets/Ocard.svg');
   background-repeat: no-repeat;
   opacity: 0;
-  transform: translate(-150px, -150px) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
 }
+
 #first-svg,
 #second-svg {
   position: absolute;
   width: 40%;
   height: 40%;
   transition: opacity 1s ease;
-}
-
-#first-svg {
 }
 
 #second-svg {
