@@ -4,9 +4,13 @@ module.exports = {
     fill: false,
   },
   purge: [],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false, // 或 'media' 或 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'first-section': '#2c3e50',
+      },
+    },
   },
   variants: {
     extend: {},

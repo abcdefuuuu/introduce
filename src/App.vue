@@ -85,15 +85,6 @@ export default {
   height: 100vh;
 }
 
-.section:nth-child(1) {
-  background-color: #2c3e50;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  padding: 0 1550px 650px 0;//往下  左  上  右
-}
-
 .section:nth-child(2) {
   background-image: url('@/assets/kid.jpg');
   background-size: cover;
