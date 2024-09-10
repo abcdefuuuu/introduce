@@ -39,7 +39,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 @import url(//fonts.googleapis.com/css?family=Abril+Fatface|Droid+Serif:400,700,400italic,700italic);
 #me{
   z-index: 1000;
@@ -73,7 +73,7 @@ body {
   right: 0;
   margin-right: 10%;
   overflow: hidden;
-  box-shadow: 0px 10px 20px -9px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 20px -9px rgba(0, 0, 0, 0.5);
   text-align: center;
   transition: all 0.4s;
   background-image: url('../assets/8.jpg');

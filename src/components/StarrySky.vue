@@ -10115,7 +10115,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 #playPause{
   margin-top: 100px;
   margin-left: 500px;
