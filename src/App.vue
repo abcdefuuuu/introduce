@@ -5,12 +5,7 @@
         <first />
       </div>
       <div class="section">
-        <img
-          ref="animatedImage"
-          src="@/assets/123.jpg"
-          alt="Your Image"
-          class="draggable-resizable rounded-lg"
-        />
+        <second />
       </div>
       <div class="section">
         <third />
@@ -19,9 +14,9 @@
         <starry-sky />
       </div>
       <!-- TODO: Update this section -->
-      <div class="section">
-        <wave />
-      </div>
+      <!--      <div class="section">-->
+      <!--        <wave />-->
+      <!--      </div>-->
     </div>
   </div>
 </template>
@@ -31,17 +26,19 @@ import anime from 'animejs';
 import Fullpage from 'fullpage.js';
 import 'fullpage.js/dist/fullpage.css';
 import first from './components/FirstSection.vue';
-import StarrySky from './components/StarrySky.vue';
+import second from './components/SecondSection.vue';
 import third from './components/ThirdSection.vue';
-import wave from './components/Waves.vue';
+import StarrySky from './components/StarrySky.vue';
+// import wave from './components/Waves.vue';
 
 export default {
   name: 'App',
   components: {
     first,
-    StarrySky,
+    second,
     third,
-    wave,
+    StarrySky,
+    // wave,
   },
   data() {
     return {
@@ -71,27 +68,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.draggable-resizable {
-  left: 0;
-  top: 0;
-  margin-top: -3vh;
-  width: auto;
-  height: 750px;
-  position: absolute;
-  z-index: 1;
-}
-
 #fullpage {
   height: 100vh;
 }
 
-.section:nth-child(2) {
-  background-image: url('@/assets/kid.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: flex;
-}
+//.section:nth-child(2) {
+//  background-image: url('@/assets/kid.jpg');
+//  background-size: cover;
+//  background-repeat: no-repeat;
+//  background-position: center;
+//  display: flex;
+//}
 
 .section:nth-child(3) {
   background-image: url('@/assets/2.jpg');
