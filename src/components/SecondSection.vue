@@ -1,6 +1,6 @@
 <template>
-  <div class="container h-screen mx-auto bg-secondSection">
-    <div class="wrapper relative h-full">
+  <div class="h-screen bg-SecondSection bg-no-repeat bg-cover">
+    <div class="container h-full mx-auto px-10 py-24">
     </div>
     <img
       ref="animatedImage"
