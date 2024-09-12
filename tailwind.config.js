@@ -11,7 +11,6 @@ module.exports = {
         'first-section': '#2c3e50',
       },
       backgroundImage: {
-        secondSection: "url('/src/assets/kid.jpg')",
       },
     },
   },

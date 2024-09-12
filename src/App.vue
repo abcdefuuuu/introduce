@@ -11,7 +11,7 @@
         <third />
       </div>
       <div class="section">
-        <starry-sky />
+        <four />
       </div>
       <!-- TODO: Update this section -->
       <!--      <div class="section">-->
@@ -28,7 +28,7 @@ import 'fullpage.js/dist/fullpage.css';
 import first from './components/FirstSection.vue';
 import second from './components/SecondSection.vue';
 import third from './components/ThirdSection.vue';
-import StarrySky from './components/StarrySky.vue';
+import four from './components/FourSection.vue';
 // import wave from './components/Waves.vue';
 
 export default {
@@ -37,7 +37,7 @@ export default {
     first,
     second,
     third,
-    StarrySky,
+    four,
     // wave,
   },
   data() {
@@ -72,21 +72,13 @@ export default {
   height: 100vh;
 }
 
-//.section:nth-child(2) {
-//  background-image: url('@/assets/kid.jpg');
+//.section:nth-child(3) {
+//  background-image: url('@/assets/2.jpg');
 //  background-size: cover;
 //  background-repeat: no-repeat;
 //  background-position: center;
 //  display: flex;
 //}
-
-.section:nth-child(3) {
-  background-image: url('@/assets/2.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: flex;
-}
 
 .section:nth-child(4) {
   align-items: center;

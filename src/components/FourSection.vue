@@ -1,12 +1,13 @@
 <template>
-<div class="h-screen bg-first-section">
-</div>
+  <div>
+
+  </div>
 </template>
 
 <script>
 
 export default {
-  name: 'ThirdSection',
+  name: 'foursection',
   mounted() {
   },
 };
