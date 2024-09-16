@@ -1,90 +1,32 @@
 <template>
-  <div class="relative w-full h-full">
-    <div id="fullpage">
-      <div class="section">
-        <first />
-      </div>
-      <div class="section">
-        <second />
-      </div>
-      <div class="section">
-        <third />
-      </div>
-      <div class="section">
-        <four />
-      </div>
-      <!-- TODO: Update this section -->
-      <!--      <div class="section">-->
-      <!--        <wave />-->
-      <!--      </div>-->
-    </div>
+  <div class="app-container flex flex-row w-screen h-screen overflow-x-auto overflow-y-hidden">
+    <first-section class="flex-shrink-0 w-screen h-full" />
+    <second-section class="flex-shrink-0 w-screen h-full" />
+    <third-section class="flex-shrink-0 w-screen h-full" />
+    <four-section class="flex-shrink-0 w-screen h-full" />
+    <!--    <waves />-->
   </div>
 </template>
 
 <script>
-import anime from 'animejs';
-import Fullpage from 'fullpage.js';
-import 'fullpage.js/dist/fullpage.css';
-import first from './components/FirstSection.vue';
-import second from './components/SecondSection.vue';
-import third from './components/ThirdSection.vue';
-import four from './components/FourSection.vue';
-// import wave from './components/Waves.vue';
+import FirstSection from './components/FirstSection.vue';
+import SecondSection from './components/SecondSection.vue';
+import ThirdSection from './components/ThirdSection.vue';
+import FourSection from './components/FourSection.vue';
+// import Waves from './components/Waves.vue';
 
 export default {
   name: 'App',
   components: {
-    first,
-    second,
-    third,
-    four,
-    // wave,
-  },
-  data() {
-    return {
-    };
-  },
-  mounted() {
-    this.animateImage();
-    // eslint-disable-next-line no-new
-    new Fullpage('#fullpage', {
-      autoScrolling: true,
-      scrollHorizontally: true,
-    });
-  },
-  methods: {
-    animateImage() {
-      anime({
-        targets: this.$refs.animatedImage,
-        scale: [0.5, 1], // 縮放
-        translateX: [-300, 150], // 從0位移到250px
-        duration: 2000, // 動畫持續時間 2000ms
-        easing: 'easeInOutQuad', // 動畫緩動效果
-        delay: 2000,
-      });
-    },
+    FirstSection,
+    SecondSection,
+    ThirdSection,
+    FourSection,
+    // Waves
   },
 };
 </script>
 
 <style lang="scss" scoped>
-#fullpage {
-  height: 100vh;
-}
 
-//.section:nth-child(3) {
-//  background-image: url('@/assets/2.jpg');
-//  background-size: cover;
-//  background-repeat: no-repeat;
-//  background-position: center;
-//  display: flex;
-//}
-
-.section:nth-child(4) {
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  background-color: #2c3e50;
-  text-align: center;
-}
 </style>

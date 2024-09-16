@@ -1,6 +1,6 @@
 <template>
-  <div class="h-screen bg-first-section">
-    <div class="container h-full mx-auto px-10 py-24 ">
+  <div class="first-section flex justify-center items-center w-full h-full bg-black">
+    <div class="container h-full mx-auto px-10 py-24">
       <div class="wrapper relative h-full">
         <svg
           id="first-svg"
@@ -81,6 +81,11 @@
             </g>
           </g>
         </svg>
+        <div class="absolute flex items-end justify-center w-full h-full pb-28">
+          <p class="text-3xl text-white">
+            前端實習生
+          </p>
+        </div>
       </div>
     </div>
   </div>

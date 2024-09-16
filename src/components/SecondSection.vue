@@ -1,24 +1,46 @@
 <template>
-  <div class="h-screen bg-first-section">
-    <div class="container h-full mx-auto px-10 py-24">
-      <div class="flex justify-center h-full w-full">
-        <div class="flex justify-between bg-blue-300 w-2/3">
-          <div class="flex justify-center h-full w-1/4 pt-28">
-          </div>
-          <div class="flex h-full w-3/4 justify-end items-start border-2 border-red-900">
-            <div class="space-y-4">
-              <span class="block text-9xl italic font-bold text-black bg-pink-400"> ABOUT ME</span>
-              <span class="block text-3xl font-bold">林姿穎</span>
-              <span class="block text-3xl font-bold">2002/07/20</span>
-              <span class="block text-3xl font-bold">基隆人 通勤族</span>
+  <div class="second-section flex justify-center items-end w-full h-screen bg-black">
+    <div class="relative w-full h-full container">
+      <div class="absolute w-1/3 h-1/5 bg-pink-100 top-36 z-10 left-80">
+        <p class="text-8xl">
+          ABOUT ME
+        </p>
+      </div>
+      <div class="relative w-5/12 h-5/6 bg-blue-50 rounded-tl-3xl rounded-tr-3xl top-52 left-72">
+        <div class="flex w-full h-full">
+          <div class="w-1/3">
+            <div class="h-1/6 w-full flex justify-center items-center"></div>
+            <div class="h-1/6 w-full flex justify-center items-center">
+              <p class="text-4xl font-bold bg-red-300">
+                林姿穎
+              </p>
+            </div>
+            <div class="h-1/6 w-full flex justify-center items-center">
+              <p class="text-4xl font-bold bg-red-300">
+                基隆人
+              </p>
+            </div>
+            <div class="h-1/6 w-full flex justify-center items-center">
+              <p class="text-4xl font-bold bg-red-300">
+                通勤族
+              </p>
             </div>
           </div>
+          <div class="w-2/3 border-4 border-red-900 rounded-tl-3xl rounded-tr-3xl">
+            <img src="@/assets/5.png" alt="me" class="w-full rounded-tl-3xl rounded-tr-3xl">
+          </div>
         </div>
-
-        <img class="z-10 absolute left-36 top-36 h-1/2" src="@/assets/4.png" alt="me" >
-        <img class="z-10 absolute right-36 bottom-0" src="@/assets/987.png" alt="me emogi" >
       </div>
-
+      <div class="absolute flex top-16 right-0 w-96 h-full">
+        <div class="block">
+          <p class="text-9xl font-bold text-pink-700">
+            #育有
+          </p>
+          <p class="text-9xl font-bold text-pink-700 pl-20">
+            一犬
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -28,9 +50,7 @@ import anime from 'animejs';
 export default {
   name: 'SecondSection',
   data() {
-    return {
-      videoSrc: 'path/to/your/video.mp4', // 视频源地址
-    };
+    return {};
   },
   mounted() {
     this.animateImage();
@@ -38,12 +58,14 @@ export default {
   methods: {
     animateImage() {
       anime({
-        targets: this.$refs.animatedImage,
-        scale: [0.5, 1], // 縮放
-        translateX: [-300, 150], // 從0位移到250px
-        duration: 2000, // 動畫持續時間 2000ms
-        easing: 'easeInOutQuad', // 動畫緩動效果
-        delay: 2000,
+        target: this.$refs.myImage,
+        translateX: -1350,
+        // scale: 2,
+        rotate: '2turn',
+        duration: 2000,
+        delay: anime.stagger(100, { start: 4000 }),
+        easing: 'easeInOutQuad',
+        loop: false,
       });
     },
   },
