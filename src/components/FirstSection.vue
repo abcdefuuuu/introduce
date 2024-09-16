@@ -76,14 +76,18 @@
           <g>
             <g id="_圖層_1" data-name="圖層_1">
               <g>
-                <path d="M334.59,90.19l-75.09-43.35c-22.61-13.06-50.47-13.06-73.1,0l-75.09,43.35c-22.61,13.06-36.54,37.18-36.54,63.3v86.69c0,26.12,13.93,50.24,36.54,63.3l75.09,43.35c22.61,13.06,50.47,13.06,73.1,0l75.09-43.35c22.61-13.06,36.54-37.18,36.54-63.3v-86.69c0-26.12-13.93-50.24-36.54-63.3ZM287.64,170.08l-42.74,93.24c-2.97,6.48-10.63,9.33-17.12,6.36h0s-63.15-28.94-63.15-28.94c-6.48-2.97-9.33-10.63-6.36-17.12l42.74-93.24c2.97-6.48,10.63-9.33,17.12-6.36l63.15,28.94c6.48,2.97,9.33,10.63,6.36,17.12Z" />
+                <path
+                  d="M334.59,90.19l-75.09-43.35c-22.61-13.06-50.47-13.06-73.1,0l-75.09,43.35c-22.61,13.06-36.54,37.18-36.54,63.3v86.69c0,26.12,13.93,50.24,36.54,63.3l75.09,43.35c22.61,13.06,50.47,13.06,73.1,0l75.09-43.35c22.61-13.06,36.54-37.18,36.54-63.3v-86.69c0-26.12-13.93-50.24-36.54-63.3ZM287.64,170.08l-42.74,93.24c-2.97,6.48-10.63,9.33-17.12,6.36h0s-63.15-28.94-63.15-28.94c-6.48-2.97-9.33-10.63-6.36-17.12l42.74-93.24c2.97-6.48,10.63-9.33,17.12-6.36l63.15,28.94c6.48,2.97,9.33,10.63,6.36,17.12Z"
+                />
               </g>
             </g>
           </g>
         </svg>
         <div class="absolute flex items-end justify-center w-full h-full pb-28">
-          <p class="text-3xl text-white">
-            前端實習生
+          <p class="text-3xl text-white opacity-0">
+            <span v-for="(char, index) in characters" :key="index" class="inline-block">
+              {{ char }}
+            </span>
           </p>
         </div>
       </div>
@@ -95,8 +99,15 @@ import anime from 'animejs';
 
 export default {
   name: 'FirstSection',
+  data() {
+    return {
+      text: '前端實習生',
+      characters: [],
+    };
+  },
   mounted() {
     this.animateFirstSVG();
+    this.characters = this.text.split('');
   },
   methods: {
     animateFirstSVG() {
@@ -127,6 +138,9 @@ export default {
         loop: false,
         complete: () => {
           this.startOcardSVGAnimation();
+          this.$nextTick(() => {
+            this.startTextAnimation();
+          });
         },
       });
     },
@@ -142,16 +156,27 @@ export default {
         loop: false,
       });
     },
+    startTextAnimation() {
+      document.querySelector('.text-white').style.opacity = 1;
+      anime({
+        targets: '.inline-block',
+        opacity: [0, 1],
+        translateX: [20, 0],
+        duration: 2000,
+        delay: anime.stagger(250, { start: 400 }),
+        easing: 'easeOutCubic',
+      });
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.container{
+.container {
   fill: none;
 }
 
-#ocard-svg{
+#ocard-svg {
   stroke-miterlimit: 10;
 }
 
