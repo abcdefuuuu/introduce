@@ -7,6 +7,10 @@ module.exports = {
   darkMode: false, // 或 'media' 或 'class'
   theme: {
     extend: {
+      strokeWidth: {
+        3: '3',
+        4: '4',
+      },
       colors: {
         'first-section': '#2c3e50',
       },

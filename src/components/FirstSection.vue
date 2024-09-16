@@ -71,7 +71,7 @@
           id="ocard-svg"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 445.91 392.06"
-          class="flex top-80 right-0 absolute w-8 h-8 bg-no-repeat stroke-current text-gray-50 stroke-2 opacity-0"
+          class="flex top-80 right-0 absolute w-8 h-8 bg-no-repeat stroke-current text-gray-50 stroke-4 opacity-0"
         >
           <g>
             <g id="_圖層_1" data-name="圖層_1">
@@ -84,7 +84,7 @@
           </g>
         </svg>
         <div class="absolute flex items-end justify-center w-full h-full pb-28">
-          <p class="text-3xl text-white opacity-0">
+          <p class="text-3xl text-blue-500 opacity-0">
             <span v-for="(char, index) in characters" :key="index" class="inline-block">
               {{ char }}
             </span>
@@ -157,7 +157,7 @@ export default {
       });
     },
     startTextAnimation() {
-      document.querySelector('.text-white').style.opacity = 1;
+      document.querySelector('.text-3xl').style.opacity = 1;
       anime({
         targets: '.inline-block',
         opacity: [0, 1],
