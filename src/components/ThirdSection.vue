@@ -37,7 +37,7 @@
                     <img src="@/assets/2.jpg" alt="Image 2" class="object-cover w-full h-full rounded-xl">
                   </div>
                   <div class="h-1/3 w-full flex justify-center items-center p-2">
-                    <img src="@/assets/3.jpg" alt="Image 3" class="object-cover w-full h-full rounded-xl">
+                    <img src="@/assets/2.png" alt="Image 3" class="object-cover w-full h-full rounded-xl">
                   </div>
                 </div>
               </div>
